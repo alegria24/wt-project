@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Cousine');
+
+/* Meni za kompanije */
+
+body {
+	font-family: 'Cousine';
+}
+
+* {
+	box-sizing: border-box;
+}
+
+header {
+	background: #181818;
+	height: 50px;
+	padding-top: 5px;
+}
+
+.inner {
+	max-width: 2000px;
+	margin: 0 auto;
+	padding: 0px 80px;
+	position: relative;
+}
+
+nav > ul {
+  	float: right;
+}
+
+nav > ul > li {
+  	text-align: center;
+	line-height: 40px;
+	margin-left: 60px;
+}
+
+nav > ul li ul li {
+	width: 200%;
+  	text-align: left;
+}
+
+nav ul li:hover {
+	position: relative;
+}
+nav ul li:hover > ul {
+  	display: block;
+	background: #181818;
+}
+nav ul li:hover > a {
+	color: #fff;
+}
+nav > ul > li > a {
+	display: block;
+  	width: 200%;
+	text-decoration: none;
+}
+
+nav > ul > li {
+  	float: left;
+}
+
+nav a {
+	color: white;
+}
+
+nav > ul li ul {
+  	display: none;
+  	position: absolute;
+  	left: 0;
+	top: 100%;
+  	width: 500%;
+	z-index: 2000;
+}
+
+nav > ul li ul li > a {
+	text-decoration: none;
+}
+
+[type="checkbox"], label {
+  display: none;
+}
+
+@media screen and (max-width: 962px) {
+	nav ul {
+		display: none;
+	}
+
+	label {
+  		display: block;
+  		background: #222;
+		width: 40px;
+  		height: 40px;
+  		cursor: pointer;
+		position: absolute;
+		right: 20px;
+  		top: 0px;
+	}
+
+	label:after{
+	  content:'';
+	  display: block;
+	  width: 30px;
+	  height: 5px;
+	  background: #777;
+	  margin: 7px 5px;
+	  box-shadow: 0px 10px 0px #777, 0px 20px 0px #777
+	}
+
+	[type="checkbox"]:checked ~ ul {
+  		display: block;
+  		z-index: 9999;
+  		position: absolute;
+		right: 20px;
+		left: 20px;
+	}
+
+	nav a {
+		color: #777;
+	}
+
+	nav ul li {
+		display: block;
+  		float: none;
+  		width: 100%;
+  		text-align: left;
+  		background: #222;
+		text-indent: 20px;
+	}
+
+	nav > ul > li {
+  		margin-left: 0px;
+	}
+
+	nav > ul li ul li {
+  		display: block;
+		float: none;
+	}
+
+	nav > ul li ul {
+		display: block;
+  		position: relative;
+  		width: 100%;
+		z-index: 9999;
+		float: none;
+	}
+}
+
+/*Pattern*/
+
+body {
+  background-color: #181818;
+  color:#444;
+  font-family: 'Cousine';
+}
+
+.list ul:nth-child(odd) {
+  background-color:#ddd;
+}
+
+.list ul:nth-child(even) {
+  background-color:#fff;
+}
+
+/* big */
+@media screen and (min-width:600px) {
+
+  .list {
+    display:table;
+    margin:1em;
+  }
+
+  .list ul {
+    display:table-row;
+  }
+
+  .list ul:first-child li {
+    background-color:#444;
+    color:#fff;
+  }
+
+  .list ul > li {
+    display:table-cell;
+    padding:.5em 1em;
+  }
+
+}
+
+/* small */
+@media screen and (max-width:599px) {
+
+  .list ul {
+    border:solid 1px #ccc;
+    display:block;
+    list-style:none;
+    margin:1em;
+    padding:.5em 1em;
+  }
+
+  .list ul:first-child {
+    display:none;
+  }
+
+  .list ul > li {
+    display:block;
+    padding:.25em 0;
+  }
+
+  .list ul:nth-child(odd) > li + li {
+    border-top:solid 1px #ccc;
+  }
+
+  .list ul:nth-child(even) > li + li {
+    border-top:solid 1px #eee;
+  }
+
+  .list ul > li:before {
+    color:#000;
+    content:attr(data-label);
+    display:inline-block;
+    font-size:75%;
+    font-weight:bold;
+    text-transform:capitalize;
+    vertical-align:top;
+    width:50%;
+  }
+
+  .list p {
+    margin:-1em 0 0 50%;
+  }
+
+}
+
+/* tiny */
+@media screen and (max-width:349px) {
+
+  .list ul > li:before {
+    display:block;
+  }
+
+  .list p {
+    margin:0;
+  }
+
+}
+
+
+/* Footer */
+
+.footer{
+	background-color: #181818;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font: normal 18px sans-serif;
+}
+
+.footer .footer-motto{
+	width: 100%;
+	max-width: 600px;
+	color:  #8d9093;
+	font-family: 'Cousine';
+	font-size: 11px;
+	margin: 0px auto;
+	margin-top: 30px;
+}
+
+.footer .footer-copyright{
+	color:  #8f9296;
+	font-size: 14px;
+	font-family: 'Cousine';
+	margin: 20px;
+}
+
+.footer .footer-links{
+	list-style: none;
+	font-family: 'Cousine';
+	font-weight: bold;
+	font-size: 14px;
+	color:  #ffffff;
+	padding: 18px 0 0px;
+	margin: 0;
+}
+
+.footer .footer-links a{
+	display:inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+@media (max-width: 600px) {
+
+	.footer{
+		padding: 35px;
+	}
+
+	.footer .footer-motto{
+		font-size: 18px;
+	}
+
+	.footer .footer-copyright { font-size: 12px; }
+
+	.footer .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer .footer-links a { line-height: 1.8; }
+}
